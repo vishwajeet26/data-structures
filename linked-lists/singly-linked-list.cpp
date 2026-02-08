@@ -13,13 +13,7 @@ class Node {
     }
     // destructor
     ~Node(){
-        int value = this -> data;
-        // memory free;
-        if(this -> next != NULL){
-            delete next;
-            this -> next = NULL;
-        };
-        cout << "Memory is free for data " << value << endl;
+        cout << "Memory is free for data " << data << endl;
     }
 };
 
@@ -39,7 +33,7 @@ void insertAtIndex(Node* &tail, Node* &head, int val, int index){
     if(index == 1){
         insertAtHead(head,val);
         return;
-    }
+    } 
     Node* n = new Node(val);
     Node* temp = head;
     int cnt = 1;
